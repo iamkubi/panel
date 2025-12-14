@@ -1,3 +1,5 @@
+[![Logo Image](https://beluga.kubiq.io/beluga_banner.png)](https://belugabit.io)
+
 # Beluga Panel
 From the creator of Pterodactyl® Panel comes the next iteration of server management solutions — Beluga. Fully
 backwards compatible with Pterodactyl with security updates and bug fixes for the modern world.

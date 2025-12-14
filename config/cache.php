@@ -97,5 +97,10 @@ return [
     |
     */
 
-    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'pterodactyl'), '_') . '_cache_'),
+    'prefix' => env(
+        'CACHE_PREFIX',
+        env('APP_USE_DEPRECATED_CACHE_KEY')
+            ? Str::slug(env('APP_NAME', 'pterodactyl'), '_') . '_cache'
+            : 'beluga_cache_',
+    ),
 ];

@@ -129,12 +129,22 @@ module.exports = {
     devServer: {
         compress: true,
         port: 5173,
+        server: {
+            type: 'https',
+            options: process.env.USE_LOCAL_DEV_SSL === 'true'
+                ? {
+                    ca: path.join(__dirname, '../../docker/certificates/root_ca.pem'),
+                    key: path.join(__dirname, '../../docker/certificates/beluga.test-key.pem'),
+                    cert: path.join(__dirname, '../../docker/certificates/beluga.test.pem'),
+                }
+                : {},
+        },
         static: {
             directory: path.join(__dirname, '/public'),
             publicPath: process.env.WEBPACK_PUBLIC_PATH || '/assets/',
         },
         allowedHosts: [
-            '.pterodactyl.test',
+            '.beluga.test',
         ],
         headers: {
             'Access-Control-Allow-Origin': '*',

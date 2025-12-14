@@ -128,7 +128,9 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'pterodactyl'), '_') . '_session'
+        env('APP_USE_DEPRECATED_CACHE_KEY')
+            ? Str::slug(env('APP_NAME', 'pterodactyl'), '_') . '_session'
+            : 'beluga_session',
     ),
 
     /*

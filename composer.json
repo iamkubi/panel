@@ -1,19 +1,12 @@
 {
-    "name": "pterodactyl/panel",
-    "description": "The free, open-source game management panel. Supporting Minecraft, Spigot, BungeeCord, and SRCDS servers.",
+    "name": "belugabit-io/panel",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Matthew Penner",
-            "email": "matthew@pterodactyl.io",
-            "homepage": "https://github.com/matthewpi",
-            "role": "Lead Developer"
-        },
         {
             "name": "Dane Everitt",
             "email": "dane@daneeveritt.com",
             "homepage": "https://github.com/DaneEveritt",
-            "role": "Developer"
+            "role": "Lead Developer"
         }
     ],
     "require": {
